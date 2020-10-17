@@ -1,0 +1,327 @@
+/* site colors
+   background: #f6edfa
+   font color: #000
+   link: #35377b
+   visited link: #8b50eb
+   active link: #7577bf
+   button: #35377b
+   button font: #fff
+   secondary button: #e0b354
+   secondary button font: #2b2b2b
+   grid: #fcfaff
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6edfa;
+  font-family: "Quicksand", sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+
+  /* Sets the line-height to 1.6 */
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #35377b;
+}
+
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:visited {
+  /* visited link */
+  color: #8b50eb;
+}
+
+a:active {
+  /* selected link */
+  color: #7577bf;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+
+  background-color: #35377b;
+  color: #fff;
+  text-decoration: none;
+
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.3s opacity;
+}
+
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+
+  background-color: #35377b;
+  color: #fff;
+  text-decoration: none;
+
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.3s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 70% */
+  opacity: 0.7;
+}
+
+.button_secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 50px;
+  border-radius: 50%;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 100px;
+}
+
+div.a {
+  text-align: center;
+  padding: 20px 60px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.grid__item {
+  background-color: #fcfaff;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+div.b {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@keyframes color-wheel {
+  0% {
+    fill: #bef50a;
+  }
+
+  50% {
+    fill: #f5490a;
+  }
+
+  100% {
+    fill: #b20af5;
+  }
+}
+
+.flame {
+  animation: 7s color-wheel infinite alternate ease;
+}
+
+@keyframes cloud-float {
+  from {
+    transform: translate(0, 40px);
+  }
+
+  to {
+    transform: translate(600px, 40px);
+  }
+}
+
+.cloud-one {
+  animation: 25s cloud-float infinite alternate linear;
+}
+
+@keyframes cloud-float-reverse {
+  from {
+    transform: translate(500px, 100px);
+  }
+
+  to {
+    transform: translate(100px, 0);
+  }
+}
+
+.cloud-two {
+  animation: 15s cloud-float-reverse infinite alternate ease;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #0f8c08;
+  }
+
+  50% {
+    fill: #fcd226;
+  }
+
+  100% {
+    fill: #c9180c;
+  }
+}
+
+.foliage {
+  animation: 22s color-change infinite alternate ease;
+}
+
+@keyframes tires-move {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.hubcaps {
+  animation: 4s tires-move infinite alternate ease-out;
+}
+
+@media all and (max-width: 750px) {
+  /* shared code */
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
